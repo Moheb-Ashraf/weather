@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container title-page">
+                <a class="navbar-brand d-flex " href="#">
+                    <img src="https://routeweather.netlify.app/images/logo@2x.png" alt="logo weather" width="64"
+                        height="38" class="me-2">
+                    <div>
+                        <h1 class="title-logo">weather</h1>
+                        <small>tagline goes here </small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item me-4">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#">live cameras</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <form class="find-location position-relative mb-5">
+                <input type="text" placeholder="Find your location" id="yourLocation">
+                <input type="button" value="Find">
+            </form>
+        </div>
+        <div class="forcast-table ">
+            <div class="container ms-auto me-auto row ">
+                <div class="card backgroundcolor1 col-lg-4">
+                    <div
+                        class="title-card d-flex justify-content-between p-3 align-items-center fw-normal bg-opacity-75 bg-black ">
+                        <div class="day" id="todayName">sunday</div>
+                        <div>
+                            <div class="date d-inline-block" id="numDay">14</div>
+                            <span id="mayName"></span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="body-card1">
+                            <div class="city fw-bold" id="cityname">
+                                cairo
+                            </div>
+                            <div class="degree">
+                                <div class="num d-inline-block" id="degree1">
+                                    "14"
+                                </div>
+                                <sup>o</sup>
+                                c
+                            </div>
+                            <div class="icon">
+                                <img src="" alt="" width="90" height="90" id="todayStateImg">
+                            </div>
+                        </div>
+                        <div class="state mb-4" id="todayStateText">sunny</div>
+                        <div class="footer-card1 d-flex">
+                            <span class="me-3 d-flex">
+                                <div class="me-2">
+                                    <img src="./images/icon-umberella.png" alt="" width="21" height="21">
+                                </div>
+                                <div id="humidity"></div>
+                            </span>
+                            <span class="me-3 d-flex">
+                                <div class="me-2">
+                                    <img src="./images/icon-wind.png" alt="" width="21" height="21">
+                                </div>
+                                <div id="wind-today"></div>
+                            </span>
+                            <span class="me-3 d-flex">
+                                <div class="me-2">
+                                    <img src="./images/icon-compass.png" alt="" width="21" height="21">
+                                </div>
+                                <div id="windDirection1"></div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card  col-lg-4 text-center backgroundcolor2 ">
+                    <div class="title-card p-3 bg-black bg-opacity-25">
+                        <div class="day" id="nextDayName">sunday</div>
+                    </div>
+                    <div class="content-2">
+                        <div class="icon">
+                            <img src="" alt="" width="90" height="90" id="nextIcon1">
+                        </div>
+                        <div class="degree-2">
+                            <div class="num d-inline-block" id="nextmaxtemp">
+                                "14"
+                            </div>
+                            <sup>o</sup>
+                            c
+                        </div>
+                        <div class="minDegree" id="minDegree1">777</div>
+                        <div class="state" id="nextState1">sunny</div>
+                    </div>
+                </div>
+                <div class="card backgroundcolor1 col-lg-4 text-center">
+                    <div class="title-card p-3 bg-black bg-opacity-75">
+                        <div class="day" id="lastDayName">sunday</div>
+                    </div>
+                    <div class="content-2">
+                        <div class="icon">
+                            <img src="" alt="" width="90" height="90" id="nextIcon2">
+                        </div>
+                        <div class="degree-2">
+                            <div class="num d-inline-block" id="nextmaxtemp2">
+                                "14"
+                            </div>
+                            <sup>o</sup>
+                            c
+                        </div>
+                        <div class="minDegree" id="minDegree2">777</div>
+                        <div class="state" id="nextState2">sunny</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer-page ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form class="subscribe-form position-relative mb-4">
+                        <input type="text" placeholder="Enter your Email to subscribe" id="">
+                        <input type="submit" value="subscribe">
+                    </form>
+                    <div class="mb-5">
+                        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled d-flex justify-content-center fs-5 mt-2">
+                        <li class="me-2">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li class="me-2">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </li>
+                        <li class="me-2">
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li class="me-2">
+                            <i class="fa-solid fa-p"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
